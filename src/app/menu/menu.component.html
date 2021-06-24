@@ -1,0 +1,14 @@
+<header>
+    <nav>
+        <a href="https://angular.io">[Angular]</a>
+    </nav>
+    <ul>
+        <li *ngIf="isUserLoggedIn()"><a routerLink="/welcome/mano">Home</a></li>
+        <li *ngIf="isUserLoggedIn()"><a routerLink="/todos">Todos</a></li>
+    </ul>
+    <ul>
+        <li *ngIf="!isUserLoggedIn()"><a routerLink="/login">Login</a></li>
+        <li *ngIf="isUserLoggedIn()"><a routerLink="/logout">Logout</a></li>
+    </ul>
+
+</header>

@@ -1,0 +1,14 @@
+<h3>Todo</h3>
+
+<div>
+    <label>Description: </label>
+    <input type="text" [(ngModel)]="todo.description" name="description" required /> <br>
+
+    <label>Target Date: </label>
+    <input type="text" 
+    [ngModel]="todo.targetDate | date:'yyyy-MM-dd' " 
+    (ngModelChange)="todo.targetDate = $event"
+    name="targetDate" required /> <br>
+
+    <button (click)="saveTodo()">Save</button>
+</div>
